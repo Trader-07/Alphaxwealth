@@ -1,0 +1,852 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleAlpha X Wealth  Empowering India's Youth through Financial Literacytitle
+    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome6.4.0cssall.min.css
+    style
+        root {
+            --primary-black #121212;
+            --secondary-black #1a1a1a;
+            --accent-gold #d4af37;
+            --light-gold #f7e98e;
+            --text-light #f5f5f5;
+            --text-gray #b0b0b0;
+        }
+        
+         {
+            margin 0;
+            padding 0;
+            box-sizing border-box;
+            font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color var(--primary-black);
+            color var(--text-light);
+            line-height 1.6;
+        }
+        
+        .container {
+            width 90%;
+            max-width 1200px;
+            margin 0 auto;
+            padding 0 20px;
+        }
+        
+         Header Styles 
+        header {
+            background-color rgba(18, 18, 18, 0.95);
+            position fixed;
+            width 100%;
+            z-index 1000;
+            box-shadow 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-container {
+            display flex;
+            justify-content space-between;
+            align-items center;
+            padding 20px 0;
+        }
+        
+        .logo {
+            display flex;
+            align-items center;
+            gap 10px;
+        }
+        
+        .logo-icon {
+            color var(--accent-gold);
+            font-size 24px;
+        }
+        
+        .logo-text {
+            font-size 24px;
+            font-weight 700;
+            background linear-gradient(to right, var(--accent-gold), var(--light-gold));
+            -webkit-background-clip text;
+            -webkit-text-fill-color transparent;
+        }
+        
+        nav ul {
+            display flex;
+            list-style none;
+            gap 30px;
+        }
+        
+        nav a {
+            color var(--text-light);
+            text-decoration none;
+            font-weight 500;
+            transition color 0.3s;
+            position relative;
+        }
+        
+        nav ahover {
+            color var(--accent-gold);
+        }
+        
+        nav aafter {
+            content '';
+            position absolute;
+            bottom -5px;
+            left 0;
+            width 0;
+            height 2px;
+            background var(--accent-gold);
+            transition width 0.3s;
+        }
+        
+        nav ahoverafter {
+            width 100%;
+        }
+        
+        .cta-button {
+            background linear-gradient(135deg, var(--accent-gold), #b8941f);
+            color var(--primary-black);
+            border none;
+            padding 12px 25px;
+            border-radius 30px;
+            font-weight 600;
+            cursor pointer;
+            transition all 0.3s;
+            box-shadow 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-buttonhover {
+            transform translateY(-3px);
+            box-shadow 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+         Hero Section 
+        .hero {
+            padding 180px 0 100px;
+            background linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)), 
+                        url('httpsimages.unsplash.comphoto-1554224155-6726b3ff858fixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size cover;
+            background-position center;
+            text-align center;
+        }
+        
+        .hero h1 {
+            font-size 3.5rem;
+            margin-bottom 20px;
+            background linear-gradient(to right, var(--accent-gold), var(--light-gold));
+            -webkit-background-clip text;
+            -webkit-text-fill-color transparent;
+        }
+        
+        .hero p {
+            font-size 1.2rem;
+            max-width 700px;
+            margin 0 auto 30px;
+            color var(--text-gray);
+        }
+        
+        .hero-buttons {
+            display flex;
+            justify-content center;
+            gap 20px;
+            margin-top 30px;
+        }
+        
+        .secondary-button {
+            background transparent;
+            color var(--accent-gold);
+            border 2px solid var(--accent-gold);
+            padding 12px 25px;
+            border-radius 30px;
+            font-weight 600;
+            cursor pointer;
+            transition all 0.3s;
+        }
+        
+        .secondary-buttonhover {
+            background rgba(212, 175, 55, 0.1);
+        }
+        
+         Section Styles 
+        section {
+            padding 100px 0;
+        }
+        
+        .section-title {
+            text-align center;
+            margin-bottom 60px;
+            position relative;
+        }
+        
+        .section-title h2 {
+            font-size 2.5rem;
+            color var(--accent-gold);
+            display inline-block;
+            position relative;
+        }
+        
+        .section-title h2after {
+            content '';
+            position absolute;
+            bottom -10px;
+            left 50%;
+            transform translateX(-50%);
+            width 80px;
+            height 3px;
+            background var(--accent-gold);
+        }
+        
+         Introduction Section 
+        .intro-content {
+            display flex;
+            align-items center;
+            gap 50px;
+        }
+        
+        .intro-text {
+            flex 1;
+        }
+        
+        .intro-text h3 {
+            font-size 2rem;
+            margin-bottom 20px;
+            color var(--accent-gold);
+        }
+        
+        .intro-text p {
+            margin-bottom 20px;
+            color var(--text-gray);
+        }
+        
+        .intro-image {
+            flex 1;
+            border-radius 10px;
+            overflow hidden;
+            box-shadow 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .intro-image img {
+            width 100%;
+            height auto;
+            display block;
+        }
+        
+         Mission Section 
+        .mission {
+            background-color var(--secondary-black);
+        }
+        
+        .mission-content {
+            display flex;
+            flex-direction column;
+            align-items center;
+            text-align center;
+            max-width 800px;
+            margin 0 auto;
+        }
+        
+        .mission-icon {
+            font-size 60px;
+            color var(--accent-gold);
+            margin-bottom 30px;
+        }
+        
+        .mission-content p {
+            font-size 1.1rem;
+            color var(--text-gray);
+            margin-bottom 30px;
+        }
+        
+         Target Audience Section 
+        .audience-cards {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+            gap 30px;
+        }
+        
+        .audience-card {
+            background-color var(--secondary-black);
+            border-radius 10px;
+            padding 30px;
+            text-align center;
+            transition transform 0.3s;
+            border 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .audience-cardhover {
+            transform translateY(-10px);
+            border-color var(--accent-gold);
+        }
+        
+        .audience-icon {
+            font-size 40px;
+            color var(--accent-gold);
+            margin-bottom 20px;
+        }
+        
+        .audience-card h3 {
+            font-size 1.5rem;
+            margin-bottom 15px;
+            color var(--accent-gold);
+        }
+        
+        .audience-card p {
+            color var(--text-gray);
+        }
+        
+         Features Section 
+        .features {
+            background-color var(--secondary-black);
+        }
+        
+        .features-grid {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+            gap 30px;
+        }
+        
+        .feature-card {
+            background-color var(--primary-black);
+            border-radius 10px;
+            padding 30px;
+            text-align center;
+            transition all 0.3s;
+            border 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .feature-cardhover {
+            transform translateY(-10px);
+            border-color var(--accent-gold);
+            box-shadow 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size 50px;
+            color var(--accent-gold);
+            margin-bottom 20px;
+        }
+        
+        .feature-card h3 {
+            font-size 1.5rem;
+            margin-bottom 15px;
+            color var(--accent-gold);
+        }
+        
+        .feature-card p {
+            color var(--text-gray);
+        }
+        
+         Importance Section 
+        .importance-content {
+            display flex;
+            align-items center;
+            gap 50px;
+        }
+        
+        .importance-text {
+            flex 1;
+        }
+        
+        .importance-text h3 {
+            font-size 2rem;
+            margin-bottom 20px;
+            color var(--accent-gold);
+        }
+        
+        .importance-text p {
+            margin-bottom 20px;
+            color var(--text-gray);
+        }
+        
+        .importance-image {
+            flex 1;
+            border-radius 10px;
+            overflow hidden;
+            box-shadow 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .importance-image img {
+            width 100%;
+            height auto;
+            display block;
+        }
+        
+         Collaborations Section 
+        .collaborations-content {
+            display flex;
+            flex-direction column;
+            align-items center;
+            text-align center;
+            max-width 800px;
+            margin 0 auto;
+        }
+        
+        .collaborations-content p {
+            font-size 1.1rem;
+            color var(--text-gray);
+            margin-bottom 30px;
+        }
+        
+        .partners {
+            display flex;
+            justify-content center;
+            flex-wrap wrap;
+            gap 40px;
+            margin-top 40px;
+        }
+        
+        .partner-logo {
+            width 180px;
+            height 100px;
+            background-color var(--secondary-black);
+            border-radius 8px;
+            display flex;
+            align-items center;
+            justify-content center;
+            color var(--accent-gold);
+            font-weight 700;
+            font-size 1.2rem;
+            transition all 0.3s;
+            cursor pointer;
+            border 1px solid rgba(212, 175, 55, 0.2);
+            padding 15px;
+        }
+        
+        .partner-logohover {
+            transform translateY(-5px);
+            border-color var(--accent-gold);
+            box-shadow 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+        
+        .partner-info {
+            margin-top 50px;
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(400px, 1fr));
+            gap 40px;
+        }
+        
+        .partner-details {
+            background-color var(--secondary-black);
+            border-radius 10px;
+            padding 30px;
+            border 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .partner-details h3 {
+            font-size 1.5rem;
+            margin-bottom 20px;
+            color var(--accent-gold);
+        }
+        
+        .partner-details p {
+            color var(--text-gray);
+            margin-bottom 15px;
+        }
+        
+         Footer 
+        footer {
+            background-color var(--secondary-black);
+            padding 80px 0 30px;
+        }
+        
+        .footer-content {
+            display grid;
+            grid-template-columns repeat(auto-fit, minmax(250px, 1fr));
+            gap 40px;
+            margin-bottom 50px;
+        }
+        
+        .footer-column h3 {
+            font-size 1.3rem;
+            margin-bottom 25px;
+            color var(--accent-gold);
+            position relative;
+        }
+        
+        .footer-column h3after {
+            content '';
+            position absolute;
+            bottom -8px;
+            left 0;
+            width 40px;
+            height 2px;
+            background var(--accent-gold);
+        }
+        
+        .footer-column p {
+            color var(--text-gray);
+            margin-bottom 20px;
+        }
+        
+        .footer-links {
+            list-style none;
+        }
+        
+        .footer-links li {
+            margin-bottom 12px;
+        }
+        
+        .footer-links a {
+            color var(--text-gray);
+            text-decoration none;
+            transition color 0.3s;
+        }
+        
+        .footer-links ahover {
+            color var(--accent-gold);
+        }
+        
+        .contact-info {
+            display flex;
+            align-items center;
+            gap 10px;
+            margin-bottom 15px;
+            color var(--text-gray);
+        }
+        
+        .contact-info i {
+            color var(--accent-gold);
+        }
+        
+        .social-links {
+            display flex;
+            gap 15px;
+            margin-top 20px;
+        }
+        
+        .social-links a {
+            display flex;
+            align-items center;
+            justify-content center;
+            width 40px;
+            height 40px;
+            background-color var(--primary-black);
+            border-radius 50%;
+            color var(--accent-gold);
+            transition all 0.3s;
+        }
+        
+        .social-links ahover {
+            background-color var(--accent-gold);
+            color var(--primary-black);
+            transform translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align center;
+            padding-top 30px;
+            border-top 1px solid rgba(255, 255, 255, 0.1);
+            color var(--text-gray);
+            font-size 0.9rem;
+        }
+        
+         Responsive Design 
+        @media (max-width 992px) {
+            .intro-content, .importance-content {
+                flex-direction column;
+            }
+            
+            .hero h1 {
+                font-size 2.8rem;
+            }
+            
+            .partner-info {
+                grid-template-columns 1fr;
+            }
+        }
+        
+        @media (max-width 768px) {
+            nav ul {
+                display none;
+            }
+            
+            .hero h1 {
+                font-size 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction column;
+                align-items center;
+            }
+            
+            .section-title h2 {
+                font-size 2rem;
+            }
+            
+            .partners {
+                flex-direction column;
+                align-items center;
+            }
+        }
+    style
+head
+body
+    !-- Header --
+    header
+        div class=container header-container
+            div class=logo
+                i class=fas fa-chart-line logo-iconi
+                div class=logo-textAlpha X Wealthdiv
+            div
+            nav
+                ul
+                    lia href=#homeHomeali
+                    lia href=#aboutAboutali
+                    lia href=#missionMissionali
+                    lia href=#featuresFeaturesali
+                    lia href=#collaborationsCollaborationsali
+                    lia href=#contactContactali
+                ul
+            nav
+            button class=cta-button onclick=redirectToForm()Get Startedbutton
+        div
+    header
+
+    !-- Hero Section --
+    section class=hero id=home
+        div class=container
+            h1Empowering India's Youth through Financial Literacyh1
+            pAlpha X Wealth is a pioneering fintech-education platform dedicated to transforming financial literacy in India. We provide free personal finance education to empower individuals to manage, grow, and protect their wealth effectively.p
+            div class=hero-buttons
+                button class=cta-button onclick=redirectToForm()Explore Coursesbutton
+                button class=secondary-button onclick=redirectToForm()Learn Morebutton
+            div
+        div
+    section
+
+    !-- Introduction Section --
+    section class=intro id=about
+        div class=container
+            div class=section-title
+                h2Introductionh2
+            div
+            div class=intro-content
+                div class=intro-text
+                    h3Alpha X Wealthh3
+                    pAlpha X Wealth is a pioneering fintech-education platform dedicated to transforming financial literacy in India. We provide free personal finance education to school and college students, professionals, and aspiring investors.p
+                    pBy leveraging engaging content and gamified courses, our goal is to empower individuals to manage, grow, and protect their wealth effectively.p
+                    button class=cta-button onclick=redirectToForm()Join Nowbutton
+                div
+                div class=intro-image
+                    img src=httpsimages.unsplash.comphoto-1551288049-bebda4e38f71ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80 alt=Financial Education
+                div
+            div
+        div
+    section
+
+    !-- Mission Section --
+    section class=mission id=mission
+        div class=container
+            div class=section-title
+                h2Mission and Visionh2
+            div
+            div class=mission-content
+                i class=fas fa-bullseye mission-iconi
+                pOur mission is to empower the next generation with essential knowledge in personal finance. We envision a financially literate India where everyone, regardless of their background, has the skills to make informed financial decisions and build a secure future.p
+                button class=secondary-button onclick=redirectToForm()Our Visionbutton
+            div
+        div
+    section
+
+    !-- Target Audience Section --
+    section class=audience
+        div class=container
+            div class=section-title
+                h2Target Audienceh2
+            div
+            div class=audience-cards
+                div class=audience-card
+                    i class=fas fa-graduation-cap audience-iconi
+                    h3Studentsh3
+                    pSchool and college students seeking foundational knowledge in personal finance and investment principles.p
+                div
+                div class=audience-card
+                    i class=fas fa-briefcase audience-iconi
+                    h3Professionalsh3
+                    pWorking professionals looking to enhance their financial management skills and investment strategies.p
+                div
+                div class=audience-card
+                    i class=fas fa-chart-line audience-iconi
+                    h3Aspiring Investorsh3
+                    pIndividuals interested in learning about investments and wealth creation for a secure financial future.p
+                div
+            div
+        div
+    section
+
+    !-- Importance Section --
+    section class=importance
+        div class=container
+            div class=section-title
+                h2Importance of Financial Literacyh2
+            div
+            div class=importance-content
+                div class=importance-image
+                    img src=httpsimages.unsplash.comphoto-1554224155-8d04cb21cd6cixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80 alt=Financial Literacy
+                div
+                div class=importance-text
+                    h3Why Financial Literacy Mattersh3
+                    pFinancial literacy is crucial for empowering individuals to make informed decisions about their money. Understanding concepts like budgeting, savings, and investments helps cultivate responsible financial behaviors.p
+                    pOur platform aims to fill the knowledge gap and equip the youth with the necessary tools to manage their finances wisely, ultimately leading to a financially savvy society that can thrive in a dynamic economy.p
+                    button class=cta-button onclick=redirectToForm()Learn Morebutton
+                div
+            div
+        div
+    section
+
+    !-- Features Section --
+    section class=features id=features
+        div class=container
+            div class=section-title
+                h2Key Featuresh2
+            div
+            div class=features-grid
+                div class=feature-card
+                    i class=fas fa-book-open feature-iconi
+                    h3Free Course Offeringsh3
+                    pWe offer high-quality, free courses for two years, ensuring accessibility to financial education for everyone. These courses cover foundational topics such as budgeting, savings, investments, and insurance.p
+                div
+                div class=feature-card
+                    i class=fas fa-robot feature-iconi
+                    h3AI-Based Learning Supporth3
+                    pOur platform utilizes AI to create personalized learning paths and track user performance, enhancing the educational experience. We ensure that learners remain engaged and can effectively absorb essential financial knowledge.p
+                div
+                div class=feature-card
+                    i class=fas fa-handshake feature-iconi
+                    h3Collaborations and Future Servicesh3
+                    pWe actively collaborate with leading financial institutions to extend our reach and impact. In addition to free courses, we plan to offer advisory services, investment tools, and affiliate programs.p
+                div
+            div
+        div
+    section
+
+    !-- Collaborations Section --
+    section class=collaborations id=collaborations
+        div class=container
+            div class=section-title
+                h2Our Partnersh2
+            div
+            div class=collaborations-content
+                pWe are proud to collaborate with leading financial institutions to enhance our offerings and extend our impact in the financial education space.p
+                
+                div class=partners
+                    div class=partner-logo onclick=redirectToZamzam()
+                        div style=text-align center;
+                            div style=font-weight bold; font-size 1.5rem; color var(--accent-gold);ZAMZAMdiv
+                            div style=font-size 1rem;CAPITALdiv
+                        div
+                    div
+                    div class=partner-logo onclick=redirectToBarakah()
+                        div style=text-align center; font-weight bold; font-size 1.5rem; color var(--accent-gold);
+                            BARAKAHbrFINSERVE
+                        div
+                    div
+                div
+                
+                div class=partner-info
+                    div class=partner-details
+                        h3Zamzam Capitalh3
+                        pZamzam Capital is India's leading SEBI Registered Sharia-compliant Research Analyst (Reg. No INH000016199), specializing in Halal shares, Sharia stock screening, and stock market investment products that are in line with Islamic financial and ethical principles.p
+                        pBy identifying companies aligned with Sharia compliance principles, we ensure our clients invest only in the shares of such companies that are Halal – free from riba (interest) and other sinful earnings while operating only in ethical and socially responsible sectors.p
+                        pOur mission is to empower investors with access to trusted resources, including a regularly updated, comprehensive list of Halal stocks that is formulated using our proprietary screening process.p
+                    div
+                    div class=partner-details
+                        h3Barakah Finserveh3
+                        pOur mission is to promote financial literacy and help clients to achieve their financial goals.p
+                        pWe integrate technology with personal engagement to provide a superior client experience. At Barakah, digitisation is not confined to offering digital channels for transacting; it extends to using technology to offer greater value and improving the customers' investment experience.p
+                        pInvestment Process At Barakah Finserve LLP, we aim to combine an understanding of your priorities with a systematic, step-by-step process. We start by spending time getting to know you and your needs. And we maintain this kind of personal attention throughout all the steps which follow.p
+                        pWe wish to become the preferred financial services firm and have a life changing impact on the relationships we manage.p
+                    div
+                div
+            div
+        div
+    section
+
+    !-- Footer --
+    footer id=contact
+        div class=container
+            div class=footer-content
+                div class=footer-column
+                    h3Alpha X Wealthh3
+                    pEmpowering India's Youth through Financial Literacy. A pioneering fintech-education platform dedicated to transforming financial literacy in India.p
+                    div class=social-links
+                        a href=#i class=fab fa-facebook-fia
+                        a href=#i class=fab fa-twitteria
+                        a href=#i class=fab fa-instagramia
+                        a href=#i class=fab fa-linkedin-inia
+                    div
+                div
+                div class=footer-column
+                    h3Quick Linksh3
+                    ul class=footer-links
+                        lia href=#homeHomeali
+                        lia href=#aboutAbout Usali
+                        lia href=#missionMissionali
+                        lia href=#featuresFeaturesali
+                        lia href=#collaborationsCollaborationsali
+                    ul
+                div
+                div class=footer-column
+                    h3Contact Ush3
+                    div class=contact-info
+                        i class=fas fa-phonei
+                        span+91 7013963007span
+                    div
+                    div class=contact-info
+                        i class=fas fa-envelopei
+                        spanalphaxwealth@gmail.comspan
+                    div
+                    div class=contact-info
+                        i class=fas fa-map-marker-alti
+                        spanIndiaspan
+                    div
+                div
+            div
+            div class=footer-bottom
+                p&copy; 2025 Alpha X Wealth. All Rights Reserved.p
+            div
+        div
+    footer
+
+    script
+         Form redirection function
+        function redirectToForm() {
+            window.open('httpsforms.gleWiD4K6XRbBehdZjSA', '_blank');
+        }
+        
+         Partner website redirections
+        function redirectToZamzam() {
+            window.open('httpszamzam-capital.com', '_blank');
+        }
+        
+        function redirectToBarakah() {
+            window.open('httpsbarakahfinserve.com', '_blank');
+        }
+        
+         Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor = {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top targetElement.offsetTop - 80,
+                    behavior 'smooth'
+                });
+            });
+        });
+        
+         Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY  100) {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(18, 18, 18, 0.95)';
+            }
+        });
+    script
+body
+html17.
